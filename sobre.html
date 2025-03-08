@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="icon" href="assets/images/icon2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-light bg-opacity-50">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/Logo1.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- Mudar o conteudo -->
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- pensando... -->
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- alterar o conteúdo-->
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Seria bom colocar uma pagina própria para isso-->
+                        <a class="nav-link" href="#team">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Criar uma pagina para efetuar login -->
+                        <a class="nav-link" href="#contact">sing in</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Criar uma pagina para cadastrar-se -->
+                        <a class="nav-link" href="#blog">sing up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<!-- Seção "Membros da Equipe" logo abaixo do header -->
+<section id="team" class="py-5" style="margin-top: 40px;"> <!-- Ajuste a margem conforme a altura do seu header -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center" data-aos="fade-left" data-aos-delay="150">
+                <div class="section-title">
+                    <h1 class="display-4 fw-semibold ">Desenvolvedores</h1>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 text-center justify-content-center">
+            <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                <div class="team-member image-zoom">
+                    <div class="image-zoom-wrapper" style="border-radius: 10%;">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="">
+                    </div>
+                    <div class="team-member-content mt-3">
+                        <h4 class="text-dark">Gustavo</h4>
+                        <p class="mb-0 text-white">DEV</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                <div class="team-member image-zoom">
+                    <div class="image-zoom-wrapper" style="border-radius: 10%;">
+                        <img src="https://t4.ftcdn.net/jpg/00/65/77/27/360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv.jpg" alt="">
+                    </div>
+                    <div class="team-member-content mt-3">
+                        <h4 class="text-dark">Gabriel</h4>
+                        <p class="mb-0 text-white">DEV</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</section>
+
+    <!-- HERO -->
+    <section id="hero2" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 data-aos="fade-left" class="text-uppercase text-gradient fw-semibold display-1">INOVANDO
+                        A</h1>
+                    <h1 data-aos="fade-left" class="text-uppercase text-gradient2 fw-semibold display-1">ECOLOGIA</h1>
+                    <h5 class="text-white mt-3 mb-4" data-aos="fade-right">
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sobre -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Causa</h1>
+                        <div class="line"></div>
+                        <p>Você já precisou descartar resíduos eletrônicos ou recicláveis e não sabia onde encontrar um ponto de coleta próximo? A Eco City chegou para resolver esse problema!</p>
+                        <div data-aos="fade-up" data-aos-delay="50" style="margin-top: 20px;">
+                            <a href="https://eco-city-eta.vercel.app/mapa" class="btn btn-brand me-2" style="border-radius: 5%;">Ver Mapa</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                        <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                            <div class="iconbox">
+                                <i class="ri-pen-nib-fill"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Mapa Interativo</h5>
+                            <p>Encontre rapidamente pontos de coleta próximos a você com nosso mapa interativo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                        <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                            <div class="iconbox">
+                                <i class="ri-stack-fill"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Informações sobre Reciclagem</h5>
+                            <p>Saiba como reciclar corretamente cada tipo de resíduo, evitando impactos ambientais..</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                        <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                            <div class="iconbox">
+                                <i class="ri-ruler-2-fill"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Agenda de Coleta e Eventos</h5>
+                            <p> Juntos, podemos transformar a cidade em um ambiente mais sustentável! Faça parte desse movimento verde!</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+
+                </div>       
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <a href="#"><img src="./assets/images/logo1.png" alt=""></a>
+                        <div class="line"></div>
+                        <p>ECO SCHOOL sempre buscando o melhor pra você e para o Mundo.</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/gualvesx/TCC.git"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SERVIÇOS</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#">Mapa Interativo</a></li>
+                            <li><a href="#">Reciclagem</a></li>
+                            <li><a href="#">Denúncias</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SOBRE</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Serviçoes</a></li>
+                            <li><a href="#">Compania</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">CONTATO</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Presidente P.</li>
+                            <li>(18) 98712 - 2539</li>
+                            <li>gustavo.sesi.bol@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row g-4 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">© Copyright ECO SCHOOL All Rights Reserved</p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="mb-0">Designed By GUSTAVO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

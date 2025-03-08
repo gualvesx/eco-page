@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="icon" href="assets/images/icon2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-light bg-opacity-50">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/Logo1.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- Mudar o conteudo -->
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- pensando... -->
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- alterar o conteúdo-->
+                        <a class="nav-link" href="mapa.html">Mapa</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Criar uma pagina para efetuar login -->
+                        <a class="nav-link" href="#contact">sing in</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Criar uma pagina para cadastrar-se -->
+                        <a class="nav-link" href="#blog">sing up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 data-aos="fade-left" class="text-uppercase text-gradient fw-semibold display-1">Seja bem-vindo
+                        ao</h1>
+                    <h1 data-aos="fade-left" class="text-uppercase text-gradient2 fw-semibold display-1">ECO CITY</h1>
+                    <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Transforme sua Cidade, Transforme o Planeta!
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sobre -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Sobre nós</h1>
+                        <div class="line"></div>
+                        <p>NÓS SOMOS UM GRUPO DE DEV'S QUE BUSCAM SOLUÇÕES ECOLÓGICAS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+                    <div id="map-container" style="position: relative; width: 100%; height: 400px; border-radius: 10%; cursor: pointer;">
+                        <div id="map" style="width: 100%; height: 100%; border-radius: 10%; transition: all 0.3s ease-in-out;"></div>
+                    </div>
+                
+                    <div data-aos="fade-up" data-aos-delay="50" style="margin-top: 20px;">
+                        <a href="https://eco-city-eta.vercel.app/mapa" class="btn btn-brand me-2" style="border-radius: 5%;">Ver Mapa</a>
+                    </div>
+                </div>                
+                <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+                    <h1>ECOLOGIA</h1>
+
+                    <p class="mt-3 mb-4">Um projeto de combate à poluição.</p>
+
+                    <div class="d-flex pt-4 mb-3">
+                        <div class="iconbox me-4"
+                            style="border-radius: 20%; overflow: hidden; padding: 10px; background: #f0f0f0;">
+                            <i><img src="assets/images/point.png" alt=""></i>
+                        </div>
+                        <div>
+                            <h5>Encontre pontos de coleta próximos</h5>
+                            <p>Descubra locais adequados para descartar seus resíduos eletrônicos e recicláveis com
+                                nosso Mapa Verde: Encontre, Recicle, Preserve!.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="iconbox me-4"
+                            style="border-radius: 20%; overflow: hidden; padding: 10px; background: #f0f0f0;">
+                            <i><img src="assets/images/reciclar.png" alt=""></i>
+                        </div>
+                        <div>
+                            <h5>Saiba como reciclar corretamente</h5>
+                            <p>Acesse informações detalhadas sobre a reciclagem de eletrônicos, seus impactos ambientais
+                                e como descartar cada tipo de resíduo da melhor forma.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="iconbox me-4"
+                            style="border-radius: 20%; overflow: hidden; padding: 10px; background: #f0f0f0;">
+                            <i class="ri-rocket-2-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Receba notificações e participe de eventos</h5>
+                            <p>Fique por dentro de campanhas, mutirões de reciclagem e iniciativas ambientais na sua
+                                cidade.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTER -->
+    <section id="counter" class="section-padding d-flex align-items-center"
+        style="background: url('https://images.pexels.com/photos/589802/pexels-photo-589802.jpeg?cs=srgb&dl=pexels-valiphotos-589802.jpg&fm=jpg') no-repeat center center/cover; height: 100vh;">
+
+        <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+            <div class="row g-4">
+                <div class="col-lg-12" data-aos="fade-down" data-aos-delay="250">
+                    <div class="p-4 rounded"
+                        style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-radius: 10px;">
+                        <h1 class="text-dark display-6">Educação e Sustentabilidade Caminham Juntas</h1>
+                        <h6 class="text-uppercase mb-0 text-dark mt-3">Cada Ponto de Coleta, Um Passo para o Futuro!
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- serviços -->
+    <section id="services" class="section-padding border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">SERVIÇOS</h1>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mudar imagem-->
+            <div class="row g-4 text-center">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Mapa Interativo</h5>
+                        <p>Mostra locais de coleta próximos, filtrados por tipo de resíduo.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Informações sobre Reciclagem</h5>
+                        <p>Contagem de coletas por.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Agenda de Coleta e Eventos</h5>
+                        <p>Informações sobre mutirões de reciclagem e feiras ecológicas.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Cadastro de Usuário</h5>
+                        <p>Ao se cadastrar pode-se solicitar pontos novos de coleta.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="ri-code-box-line"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Blog e Notícias Ambientais</h5>
+                        <p>Dicas ecológicas, novidades sobre reciclagem e meio ambiente e tendências sustentáveis.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
+                    <div class="service theme-shadow p-lg-5 p-4 bg-light">
+                        <div class="iconbox">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <h5 class="mt-4 mb-3">Denúncias e Solicitações</h5>
+                        <p>Espaço para relatar descarte irregular na cidade e solicitação de instalação de novos pontos de coleta.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section-padding">
+        <div class="container-fluid bg-light py-5 px-4" style="border-radius: 5%;">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h5 class="mt-4 mb-3">Apoie a causa.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="assets/images/project-1.png" alt="">
+                        </div>
+                        <a href="assets/images/project-1.png" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="assets/images/project-2.png" alt="">
+                        </div>
+                        <a href="assets/images/project-2.png" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="assets/images/project-3.png" alt="">
+                        </div>
+                        <a href="assets/images/project-3.png" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="assets/images/project-4.png" alt="">
+                        </div>
+                        <a href="assets/images/project-4.png" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="https://greeneletron.org.br/blog/wp-content/uploads/2022/07/reciclagem2.jpg" alt="">
+                        </div>
+                        <a href="https://greeneletron.org.br/blog/wp-content/uploads/2022/07/reciclagem2.jpg" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper" style="border-radius: 5%;">
+                            <img src="assets/images/project-6.png" alt="">
+                        </div>
+                        <a href="assets/images/project-6.png" data-fancybox="gallery" class="iconbox">
+                            <i class="ri-search-2-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <a href="#"><img src="./assets/images/logo1.png" alt=""></a>
+                        <div class="line"></div>
+                        <p>ECO CITY sempre buscando o melhor pra você e para o Mundo.</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/gualvesx/TCC.git"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SERVIÇOS</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#">Mapa Interativo</a></li>
+                            <li><a href="#">Reciclagem</a></li>
+                            <li><a href="#">Denúncias</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SOBRE</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Serviçoes</a></li>
+                            <li><a href="#">Compania</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">CONTATO</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Presidente P.</li>
+                            <li>(18) 98712 - 2539</li>
+                            <li>gustavo.sesi.bol@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row g-4 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">© Copyright ECO CITY All Rights Reserved</p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="mb-0">Designed By GUSTAVO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/3a47ab78fd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

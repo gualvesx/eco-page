@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eco City - Mapa dos Pontos de Coleta</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        /* Mapa como fundo */
+        #map-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Coloca o mapa atrás de outros elementos */
+        }
+
+        /* Ajuste do conteúdo para garantir que fique acima do mapa */
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-eco {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-eco:hover {
+            background-color: #388E3C;
+        }
+
+        .navbar {
+            transition: opacity 0.5s ease;
+        }
+
+        .navbar.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" >
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-light " id="navbar2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/Logo1.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo da página -->
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+        <div class="row g-4">
+            <div class="col-lg-12" data-aos="fade-down" data-aos-delay="250">
+                <div class="p-4 rounded"
+                    style="background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(5px); border-radius: 10px; margin-top:50px;">
+                    <h1 class="text-dark display-6">Explore o EcoCity</h1>
+                </div>
+
+                <div class="d-flex justify-content-center" style="margin-top: 20px;">
+                    <a href="https://eco-city-eta.vercel.app/mapa" class="btn"
+                        style="background-color: #4CAF50; color: white; border-radius: 5%; padding: 10px 20px; text-decoration: none; transition: background-color 0.3s;">
+                        Ver Mapa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mapa em Fundo -->
+    <div id="map-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init(); // Inicializa animações
+
+        let mapa;
+
+        function inicializarMapa() {
+            if (window.mapaInicializado) return; // Evita inicializar múltiplas vezes
+            window.mapaInicializado = true;
+
+            // Inicializa o mapa como fundo do site em Presidente Prudente
+            mapa = L.map('map-container', {
+                center: [-22.12918223115807, -51.39940012356393], // Coordenadas de Presidente Prudente
+                zoom: 12, // Zoom para focar na cidade
+                zoomControl: false, // Remove o controle de zoom
+                dragging: false, // Desativa o arraste
+                touchZoom: false, // Desativa o zoom touch
+                scrollWheelZoom: false, // Desativa o zoom com roda do mouse
+                boxZoom: false, // Desativa o zoom com caixa
+                doubleClickZoom: false, // Desativa o zoom com clique duplo
+                keyboard: false // Desativa o controle de teclado
+            });
+
+            // Adiciona os tiles do OpenStreetMap para o mapa de fundo
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(mapa);
+        }
+
+        // Inicializa o mapa assim que a página for carregada
+        window.onload = inicializarMapa;
+    </script>
+
+</body>
+
+</html>
