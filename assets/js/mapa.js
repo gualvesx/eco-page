@@ -1,7 +1,7 @@
-    // Inicializa o mapa cobrindo toda a tela, com centro no Brasil
-    var map = L.map('map', {
-        center: [-22.12918223115807, -51.39940012356393],
-        zoom: 13
+// Inicializa o mapa cobrindo toda a tela, com centro no Brasil
+var map = L.map('map', {
+  center: [-22.12918223115807, -51.39940012356393],
+  zoom: 13
 });
 
 // Adiciona os tiles do OpenStreetMap
@@ -11,7 +11,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Lista de locais ecológicos
 var locais = [
-  { nome: "Presidente Prudente", lat: -22.12918223115807 , lon: -51.39940012356393 },
+  { nome: "Presidente Prudente", lat: -22.12918223115807, lon: -51.39940012356393 },
   { nome: "Floresta da Tijuca", lat: -22.9519, lon: -43.2105 },
   { nome: "Parque Nacional da Serra da Capivara", lat: -9.2132, lon: -42.8013 }
 ];
@@ -45,11 +45,11 @@ marcadoresEcologicos.forEach(marcador => {
 let pontos = [];
 
 // Função para adicionar marcador ao clicar no mapa e salvar o ponto
-map.on('click', function(e) {
+map.on('click', function (e) {
   // Cria um marcador com o ícone personalizado
   L.marker([e.latlng.lat, e.latlng.lng], { icon: iconePersonalizado }).addTo(map)
     .bindPopup('🌳 Novo ponto ecológico!');
-  
+
   // Armazena a posição clicada
   let ponto = {
     lat: e.latlng.lat,
@@ -71,7 +71,7 @@ function limparMarcadores() {
 }
 
 // Carrega pontos salvos ao abrir o site
-window.onload = function() {
+window.onload = function () {
   let pontosSalvos = localStorage.getItem("pontos");
   if (pontosSalvos) {
     pontos = JSON.parse(pontosSalvos);

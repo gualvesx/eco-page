@@ -6,10 +6,10 @@
     --c-dark: #212529;
     --c-brand: rgb(12, 129, 28);
     --c-brand-light: rgb(34, 184, 54);
-    --c-brand-rgb: 0,0,0;
+    --c-brand-rgb: 0, 0, 0;
     --c-body: #727272;
     --font-base: "ClashDisplay", sans-serif;
-    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.08);
     --transition: all 0.5s ease;
 }
 
@@ -26,7 +26,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    background-color: rgba(255, 255, 255, 0.7); /* Branco com 50% de transparência */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Branco com 50% de transparência */
     box-shadow: var(--box-shadow);
 
 }
@@ -43,8 +44,18 @@ body {
 
 
 
-h1, h2, h3,h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     font-weight: 600;
     color: var(--c-dark);
 }
@@ -84,8 +95,8 @@ img {
     position: relative;
 }
 
-.image-zoom-wrapper img{
-     transition: var(--transition);
+.image-zoom-wrapper img {
+    transition: var(--transition);
 }
 
 .image-zoom:hover .image-zoom-wrapper img {
@@ -95,18 +106,21 @@ img {
 
 /* NAVBAR */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8); /* Branco com 50% de transparência */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Branco com 50% de transparência */
     box-shadow: var(--box-shadow);
-    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque no fundo */
 }
 
 #navbar2 {
-    background-color: rgba(255, 255, 255, 1); /* Branco com 50% de transparência */
+    background-color: rgba(255, 255, 255, 1);
+    /* Branco com 50% de transparência */
     box-shadow: var(--box-shadow);
 
 }
 
-.line{
+.line {
     background-color: #faedc9;
 }
 
@@ -117,7 +131,7 @@ img {
 }
 
 .navbar-nav .nav-link.active {
-    color:rgb(12, 129, 28);
+    color: rgb(12, 129, 28);
 }
 
 
@@ -131,8 +145,14 @@ img {
 }
 
 .btn-brand {
-    background-color:rgb(12, 129, 28) ;
-    border-color:rgb(12, 129, 28) ;
+    background-color: rgb(12, 129, 28);
+    border-color: rgb(12, 129, 28);
+    color: white;
+}
+
+.btn-brand2 {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
     color: white;
 }
 
@@ -140,27 +160,27 @@ img {
 
 .btn-brand:hover {
     background-color: rgb(255, 255, 255);
-    border-color:rgb(12, 129, 28);
+    border-color: rgb(12, 129, 28);
     color: rgb(12, 129, 28);
 }
 
 .btn-eco:hover {
     background-color: #388E3C;
-  }
+}
 
 #map {
-    height: 500px; 
+    height: 500px;
     width: 100%;
     border-radius: 10px;
     margin-top: 20px;
-  }
+}
 
 .btn-eco {
     background-color: #4CAF50;
     color: white;
     font-weight: bold;
     transition: 0.3s;
-  }
+}
 
 /* HERO */
 #hero {
@@ -241,7 +261,7 @@ img {
 }
 
 .service:hover .iconbox {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
 }
 
@@ -342,7 +362,7 @@ footer {
 
 .footer-top {
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-bottom {
@@ -354,7 +374,7 @@ footer {
 footer li,
 footer p,
 footer a {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 footer ul {
@@ -376,7 +396,7 @@ footer .line {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100px;
 }
 
@@ -384,4 +404,3 @@ footer .line {
     background-color: var(--c-brand);
     color: white;
 }
-
